@@ -7,83 +7,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
 </head>
 
 <body id="body">
-    <header id="menuInicio">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../assets/logocolor.png" width="100" height="100" alt="logo">
-            </a>
+    <!--barra de navegacion-->
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../assets/Coffehouse.jpg" width="75px" height="75px"
+                    alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ubicacion.html">Ubicacion</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <nav class="menu__inicio">
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./contacto.html">Contactanos</a></li>
-                <li><a href="./ubicacion.html">Ubicacion</a></li>
-            </ul>
-        </nav>
-    </header>
+    </nav>
     <div class="titulo">
         <h2>Contactanos</h2>
     </div>
-    <main class="contactanos">
-        <div class="contacto">
-            <div class="contacto__wp">
-                <img src="../assets/wplogo.webp" width="50" height="50" alt="whatsapp">
-                <a href="https://web.whatsapp.com/" target="_blank">549 15 000 0000</a>
-            </div>
-            <div class="contacto__fb">
-                <img src="../assets/facebook-logo-icon-voronezh-russia-november-square-blue-color-164585769.jpeg"
-                    width="50" height="50" alt="facebook">
-                <a href="https://www.facebook.com/" target="_blank">/CoffeeHouse</a>
-            </div>
-            <div class="contacto__in">
-                <img src="../assets/Instagram_logo_2016.svg.png" width="50" height="50" alt="instagram">
-                <a href="https://www.instagram.com/" target="_blank">@Cofeehouse</a>
+    <!-- INICIO FORMULARIO HTML -->
+    <form method="POST" action="/index.php" class="needs-validation" novalidate>
+
+        <div class="form-row mt-5">
+            <div class="col-md-4 mb-3">
+                <label for="validarNombre">Nombre:<span class="red">*</span></label>
+                <input type="text" class="form-control" id="validarNombre" name="validarNombre" required>
             </div>
         </div>
 
-        <form action="" class="contacto__form">
-            <fieldset style="width:250px;" class="contacto_int">
-                <legend>Contactanos</legend>
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" placeholder="Nombre">
-                <br>
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" placeholder="Apellido">
-                <br>
-                <label for="email">Email</label>
-                <input type="text" name="email" placeholder="Email">
-                <br>
-                <label for="telefono">Teléfono</label>
-                <input type="text" name="telefono" placeholder="Teléfono">
-                <br>
-                <p>Mensaje</p>
-                <textarea name="mensaje" id="" cols="30" rows="10">
-            </textarea>
-                <br>
-                <input type="submit" value="Enviar" class="enviar">
-            </fieldset>
-        </form>
-    </main>
-    <div class="wp">
-        <img src="../assets/wplogo.webp" width="50" height="50" alt="whatsapp">
-    </div>
-    <footer class="footer">
-        <div>
-            <img src="../assets/Instagram_logo_2016.svg.png" width="30" height="30" alt="intagram">
-            <a href="https://www.instagram.com" target="_blank">Nuestro Instagram</a>
-            <img src="../assets/facebook-logo-icon-voronezh-russia-november-square-blue-color-164585769.jpeg" width="30"
-                height="30" alt="facebook">
-            <a href="https://m.facebook.com/?_rdr" target="_blank">Nuestro Facebook</a>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validarApellidos">Apellidos:<span class="red">*</span></label>
+                <input type="text" class="form-control" id="validarApellidos" name="validarApellidos" required>
+            </div>
         </div>
-        <div>
-            ©todos los derechos reservados
+
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validarEmail">Email:<span class="red">*</span></label>
+                <input type="email" class="form-control" id="validarEmail" name="validarEmail" required>
+            </div>
         </div>
-    </footer>
+
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validarTelefono">Teléfono:</label>
+                <input type="number" class="form-control" id="validarTelefono" name="validarTelefono" max="999999999">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validarTema">Tema:<span class="red">*</span></label>
+                <select class="custom-select" id="validarTema" name="validarTema" required>
+                    <option selected disabled value="">Selecciona...</option>
+                    <option value="Problema con acceso a Web">Problema con acceso a Web</option>
+                    <option value="Propuesta de colaboración">Propuesta de colaboración</option>
+                    <option value="Eliminar mi usuario de la Web">Eliminar mi usuario de la Web</option>
+                    <option value="Otras cuestiones">Otras cuestiones</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validarAsunto">Asunto:</label>
+                <input type="text" class="form-control" id="validarAsunto" name="validarAsunto" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="validationMensaje">Mensaje:<span class="red">*</span></label>
+            <textarea class="form-control" id="validationMensaje" name="validationMensaje" rows="3" min="25"
+                required></textarea>
+        </div>
+
+        <div class="form-group mb-10">
+            <button class="btn btn-primary" type="submit" name="submit">Enviar</button>
+            <button class="btn btn-success" type="reset" name="reset">Limpiar</button>
+        </div>
+        <footer class="container-fluid bg-light text-center p-3">
+            <p class="small">2022 Desarrollo web-CODER HOUSE-CAFETERIA Javier Diaz</p>
+        </footer>
+
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+    </form>
 </body>
 
 </html>
